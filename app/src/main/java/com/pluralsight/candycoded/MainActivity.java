@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
     private void addCandiesToDatabase(Candy[] candies) {
         SQLiteDatabase db = candyDbHelper.getWritableDatabase();
 
@@ -91,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
             values.put(CandyEntry.COLUMN_NAME_PRICE, candy.price);
             values.put(CandyEntry.COLUMN_NAME_DESC, candy.description);
             values.put(CandyEntry.COLUMN_NAME_IMAGE, candy.image);
-
             db.insert(CandyEntry.TABLE_NAME, null, values);
         }
     }
